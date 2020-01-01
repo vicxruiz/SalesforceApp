@@ -35,7 +35,26 @@ class AccountSceneController: UITableViewController {
        }
     }
     
-    // MARK: - Table view data source
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       if segue.identifier == "toContactsSceneController" {
+           let destination = segue.destination as! ContactsSceneController
+           let cell = sender as! UITableViewCell
+           let indexPath = self.tableView.indexPath(for: cell)!
+           if let accountName = self.dataRows[indexPath.row]["Name"] as? String {
+               destination.name = accountName
+           }
+           if let accountId = self.dataRows[indexPath.row]["Id"] as? String {
+               destination.accountId = accountId
+           }
+       }
+    }
+    
+}
+
+// MARK: - Table view data source
+
+extension AccountSceneController {
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
        return 1
     }
