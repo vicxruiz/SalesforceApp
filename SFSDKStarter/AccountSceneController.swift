@@ -35,4 +35,23 @@ class AccountSceneController: UITableViewController {
        }
     }
     
+    // MARK: - Table view data source
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+       return 1
+    }
+    override func tableView(_ tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
+       return self.dataRows.count
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       let cellIdentifier = "AccountNameCellIdentifier"
+       let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier:cellIdentifier) ?? UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
+//       let image = UIImage(named: "icon.png")
+//       cell.imageView?.image = image
+       // Configure the cell to show the data.
+       let obj = dataRows[indexPath.row]
+       cell.textLabel?.text = obj["Name"] as? String
+       cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+       return cell
+    }
+    
 }
