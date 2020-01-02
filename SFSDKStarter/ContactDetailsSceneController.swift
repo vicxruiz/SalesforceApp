@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SalesforceSDKCore
 
 class ContactDetailsSceneController: UITableViewController {
     
@@ -15,6 +16,9 @@ class ContactDetailsSceneController: UITableViewController {
     
     var name: String?
     var contactId: String?
+    var dataRows = [ObjectField]()
+    typealias ObjectField = (label: String, value: String)
+    
     
     //MARK: - View Lifecycle
     
@@ -36,5 +40,33 @@ class ContactDetailsSceneController: UITableViewController {
             Service.showAlert(on: self, style: .alert, title: Service.errorTitle, message: Service.errorMsg)
             return
         }
+        let fieldList = "Id, Name, Email, Phone, MailingStreet, MailingCity, MailingState, MailingPostalCode"
+        let request = RestClient.shared.requestForRetrieve(withObjectType: "Contact", objectId: contactId, fieldList: fieldList)
+        
+        RestClient.shared.send(request: request, onFailure: { (error, urlResponse) in
+            SalesforceLogger.d(type(of:self), message:"Error invoking: \(request)")
+            Service.showAlert(on: self, style: .alert, title: Service.errorTitle, message: error?.localizedDescription)
+        }) { [weak self] (response, urlResponse) in
+            var results = [ObjectField]()
+            guard let strongSelf = self else { return }
+            
+            SalesforceLogger.d(type(of:strongSelf),message:"Invoked: \(request)")
+            if let dictionaryResponse = response as? [String: Any] {
+                results = strongSelf.fields(from: dictionaryResponse)
+            }
+            
+            DispatchQueue.main.async {
+                strongSelf.dataRows = results
+                strongSelf.tableView.reloadData()
+            }
+        }
     }
+    
+    private func fields(from record: [String: Any]) -> [ObjectField] {
+       let fieldExclusionList = ["attributes", "Id"]
+       let filteredRecord = record.lazy.filter { key, value in !fieldExclusionList.contains(key) && value is String }
+       return filteredRecord.map { key, value in (label: key, value: value as! String) }
+    }
+    
+    
 }
