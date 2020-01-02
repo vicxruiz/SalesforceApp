@@ -16,6 +16,7 @@ class ContactDetailsSceneController: UITableViewController {
     
     var name: String?
     var contactId: String?
+    var imagePickerCtrl: UIImagePickerController!
     var dataRows = [ObjectField]()
     typealias ObjectField = (label: String, value: String)
     
@@ -69,6 +70,19 @@ class ContactDetailsSceneController: UITableViewController {
        return filteredRecord.map { key, value in (label: key, value: value as! String) }
     }
     
+    //MARK: - Actions
+    
+    @IBAction func didTapPhotoButton(_ sender: Any){
+       imagePickerCtrl = UIImagePickerController()
+       imagePickerCtrl.delegate = self
+       if UIImagePickerController.isSourceTypeAvailable(.camera) {
+           imagePickerCtrl.sourceType = .camera
+       } else {
+           // Device camera is not available. Use photo album instead.
+           imagePickerCtrl.sourceType = .savedPhotosAlbum
+       }
+       present(imagePickerCtrl, animated: true, completion: nil)
+    }
     
 }
 
@@ -92,4 +106,17 @@ extension ContactDetailsSceneController {
         
         return cell
     }
+}
+
+extension ContactDetailsSceneController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+       imagePickerCtrl.dismiss(animated: true, completion: nil)
+       // make sure to leave this line in, it helps us score the challenge
+       RestClient.shared.sendImagesSelectedInstrumentation()
+       if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+           SalesforceLogger.e(type(of: self), message: "Got a Photo.")
+       }
+    }
+    
 }
