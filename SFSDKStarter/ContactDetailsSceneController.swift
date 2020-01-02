@@ -111,12 +111,30 @@ extension ContactDetailsSceneController {
 extension ContactDetailsSceneController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-       imagePickerCtrl.dismiss(animated: true, completion: nil)
-       // make sure to leave this line in, it helps us score the challenge
-       RestClient.shared.sendImagesSelectedInstrumentation()
-       if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
-           SalesforceLogger.e(type(of: self), message: "Got a Photo.")
-       }
+        imagePickerCtrl.dismiss(animated: true, completion: nil)
+        // make sure to leave this line in, it helps us score the challenge
+        RestClient.shared.sendImagesSelectedInstrumentation()
+        if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+            guard let contactId = contactId else {
+                Service.showAlert(on: self, style: .alert, title: Service.errorTitle, message: Service.errorMsg)
+                return
+            }
+            let attachmentRequest = RestClient.shared.requestForCreatingImageAttachment(from: image.resized(toWidth: 250.0), relatingTo: contactId)
+            RestClient.shared.send(request: attachmentRequest, onFailure: {(error, urlResponse) in
+                let errorDescription: String
+                if let error = error {
+                    errorDescription = "\(error)"
+                } else {
+                    errorDescription = "An unknown error occurred."
+                }
+                SalesforceLogger.e(type(of: self), message: "Failed to successfully complete the REST request. \(errorDescription)")
+                Service.showAlert(on: self, style: .alert, title: Service.errorTitle, message: errorDescription)
+            }){ result, _ in
+                let successMessage = "Completed upload of photo"
+                SalesforceLogger.d(type(of: self), message: successMessage)
+                Service.showAlert(on: self, style: .alert, title: "Success!", message: successMessage)
+            }
+        }
     }
     
 }

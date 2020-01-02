@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		571411DC23BC19840089C003 /* AccountSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571411DB23BC19840089C003 /* AccountSceneController.swift */; };
 		5731918523BE945C000BE2E7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5731918423BE945C000BE2E7 /* Service.swift */; };
+		5731919523BEA712000BE2E7 /* RestClient+attachments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5731919423BEA712000BE2E7 /* RestClient+attachments.swift */; };
 		B58C4388226F61D70090B64F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58C4386226F61D70090B64F /* Main.storyboard */; };
 		B58C438A226F61D70090B64F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B58C4389226F61D70090B64F /* Assets.xcassets */; };
 		B58C438D226F61D70090B64F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58C438B226F61D70090B64F /* LaunchScreen.storyboard */; };
@@ -126,6 +127,7 @@
 /* Begin PBXFileReference section */
 		571411DB23BC19840089C003 /* AccountSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSceneController.swift; sourceTree = "<group>"; };
 		5731918423BE945C000BE2E7 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		5731919423BEA712000BE2E7 /* RestClient+attachments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestClient+attachments.swift"; sourceTree = "<group>"; };
 		B58C437D226F61D70090B64F /* SFSDKStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFSDKStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B58C4387226F61D70090B64F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B58C4389226F61D70090B64F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				B58C438E226F61D70090B64F /* Info.plist */,
 				571411DB23BC19840089C003 /* AccountSceneController.swift */,
 				5731918423BE945C000BE2E7 /* Service.swift */,
+				5731919423BEA712000BE2E7 /* RestClient+attachments.swift */,
 			);
 			path = SFSDKStarter;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				B59C3F282357A02D0060CE1A /* ContactDetailsSceneController.swift in Sources */,
 				B59C3F42235945F90060CE1A /* AppDelegate+Trailhead.swift in Sources */,
 				B59C3F44235945F90060CE1A /* UIImage+resize.swift in Sources */,
+				5731919523BEA712000BE2E7 /* RestClient+attachments.swift in Sources */,
 				571411DC23BC19840089C003 /* AccountSceneController.swift in Sources */,
 				B59C3F41235945F90060CE1A /* RestClient+extensions.swift in Sources */,
 				B59C3F2023579F9D0060CE1A /* ContactsSceneController.swift in Sources */,
