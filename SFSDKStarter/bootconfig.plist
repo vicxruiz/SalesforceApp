@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>remoteAccessConsumerKey</key>
-	<string>3MVG9LBJLApeX_PDUsthKOLhP5vq7uERb7bIHbV6fgGk_JMuY5ilagiy2NgMH6SoPo3LGShqL28j5N4T0mU0K</string>
+	<string>3MVG9LBJLApeX_PCXRCtD5.rYV2Ifmb.acU0wB_1pETmfotfAli_pMru2WqEW7KkDyPWEF9MtxIARQlHaIoY3</string>
 	<key>oauthRedirectURI</key>
 	<string>testsfdc:///mobilesdk/detect/oauth/done</string>
 	<key>oauthScopes</key>
