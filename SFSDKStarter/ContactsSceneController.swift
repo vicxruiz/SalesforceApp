@@ -40,13 +40,14 @@ class ContactsSceneController: UITableViewController {
     private func fetchContactsFromAPI() {
         
         guard let accountId = accountId else {
-            Service.showAlert(on: self, style: .alert, title: "Error getting account information", message: "Please check your connection and try again.")
+            Service.showAlert(on: self, style: .alert, title: Service.errorTitle, message: Service.errorMsg)
             return
         }
         
         let request = RestClient.shared.request(forQuery: "SELECT Id, Name FROM Contact WHERE accountid = '\(accountId)'")
         RestClient.shared.send(request: request, onFailure: { (error, urlResponse) in
             SalesforceLogger.d(type(of:self), message:"Error invoking: \(request)")
+            Service.showAlert(on: self, style: .alert, title: Service.errorTitle, message: error?.localizedDescription)
         }) { [weak self] (response, urlResponse) in
             guard let strongSelf = self,
                 let jsonResponse = response as? Dictionary<String,Any>,
@@ -84,7 +85,7 @@ extension ContactsSceneController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toContactDetailController" {
+        if segue.identifier == "toContactDetailSegue" {
             guard let destination = segue.destination as? ContactDetailsSceneController, let indexPath = self.tableView.indexPathForSelectedRow else {
                 return
             }

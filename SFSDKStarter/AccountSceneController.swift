@@ -23,6 +23,7 @@ class AccountSceneController: UITableViewController {
         let request = RestClient.shared.request(forQuery: "SELECT Id, Name FROM Account LIMIT 10")
         RestClient.shared.send(request: request, onFailure: { (error, urlResponse) in
             SalesforceLogger.d(type(of:self), message:"Error invoking: \(request)")
+            Service.showAlert(on: self, style: .alert, title: Service.errorTitle, message: error?.localizedDescription)
         }) { [weak self] (response, urlResponse) in
             guard let strongSelf = self,
                 let jsonResponse = response as? Dictionary<String,Any>,
