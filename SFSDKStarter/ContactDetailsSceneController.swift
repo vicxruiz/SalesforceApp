@@ -11,4 +11,10 @@ import UIKit
 
 class ContactDetailsSceneController: UIViewController {
     
+    //MARK: - Properties
+    
+    var name: String?
+    var contactId: String?
+    
+    
 }

@@ -39,10 +39,10 @@
             </objects>
             <point key="canvasLocation" x="-14" y="-155"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Contacts Scene Controller-->
         <scene sceneID="eb3-ao-aQL">
             <objects>
-                <tableViewController id="nP8-jm-Txf" sceneMemberID="viewController">
+                <tableViewController id="nP8-jm-Txf" customClass="ContactsSceneController" customModule="SFSDKStarter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UJ0-sW-um0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
