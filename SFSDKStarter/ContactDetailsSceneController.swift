@@ -25,6 +25,7 @@ class ContactDetailsSceneController: UITableViewController {
     override func loadView() {
         super.loadView()
         updateViews()
+        fetchContactDetailsFromAPI()
     }
     
     //MARK: - Helper Methods
@@ -69,4 +70,26 @@ class ContactDetailsSceneController: UITableViewController {
     }
     
     
+}
+
+extension ContactDetailsSceneController {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
+        return self.dataRows.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "ContactFieldIdentifier"
+    
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier:cellIdentifier) ?? UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
+        
+        let obj = dataRows[indexPath.row]
+        cell.textLabel?.text = obj.value
+        cell.detailTextLabel?.text = obj.label
+        
+        return cell
+    }
 }
