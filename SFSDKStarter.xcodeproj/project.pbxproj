@@ -10,15 +10,14 @@
 		571411DC23BC19840089C003 /* AccountSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571411DB23BC19840089C003 /* AccountSceneController.swift */; };
 		5731918523BE945C000BE2E7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5731918423BE945C000BE2E7 /* Service.swift */; };
 		5731919523BEA712000BE2E7 /* RestClient+attachments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5731919423BEA712000BE2E7 /* RestClient+attachments.swift */; };
+		5731919C23BEACD2000BE2E7 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5731919B23BEACD2000BE2E7 /* InitialViewController.swift */; };
 		B58C4388226F61D70090B64F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58C4386226F61D70090B64F /* Main.storyboard */; };
 		B58C438A226F61D70090B64F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B58C4389226F61D70090B64F /* Assets.xcassets */; };
 		B58C438D226F61D70090B64F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58C438B226F61D70090B64F /* LaunchScreen.storyboard */; };
 		B58C4398226F61D80090B64F /* SFSDKStarterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58C4397226F61D80090B64F /* SFSDKStarterTests.swift */; };
-		B58C43F3226F650E0090B64F /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58C43EE226F650E0090B64F /* InitialViewController.swift */; };
 		B58C43F4226F650E0090B64F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58C43EF226F650E0090B64F /* AppDelegate.swift */; };
 		B58C43F5226F650E0090B64F /* bootconfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = B58C43F0226F650E0090B64F /* bootconfig.plist */; };
 		B58C43F6226F650E0090B64F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58C43F1226F650E0090B64F /* main.swift */; };
-		B58C43F7226F650E0090B64F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58C43F2226F650E0090B64F /* RootViewController.swift */; };
 		B58C441B226FA3390090B64F /* SalesforceAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58C43AC226F634B0090B64F /* SalesforceAnalytics.framework */; };
 		B58C441C226FA3390090B64F /* SalesforceSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58C43BB226F63520090B64F /* SalesforceSDKCommon.framework */; };
 		B58C441D226FA3390090B64F /* SalesforceSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58C43CD226F635B0090B64F /* SalesforceSDKCore.framework */; };
@@ -128,6 +127,7 @@
 		571411DB23BC19840089C003 /* AccountSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSceneController.swift; sourceTree = "<group>"; };
 		5731918423BE945C000BE2E7 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		5731919423BEA712000BE2E7 /* RestClient+attachments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestClient+attachments.swift"; sourceTree = "<group>"; };
+		5731919B23BEACD2000BE2E7 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		B58C437D226F61D70090B64F /* SFSDKStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFSDKStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B58C4387226F61D70090B64F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B58C4389226F61D70090B64F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,11 +139,9 @@
 		B58C43A2226F634B0090B64F /* SalesforceAnalytics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SalesforceAnalytics.xcodeproj; path = "mobile_sdk/SalesforceMobileSDK-iOS/libs/SalesforceAnalytics/SalesforceAnalytics.xcodeproj"; sourceTree = "<group>"; };
 		B58C43B3226F63520090B64F /* SalesforceSDKCommon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SalesforceSDKCommon.xcodeproj; path = "mobile_sdk/SalesforceMobileSDK-iOS/libs/SalesforceSDKCommon/SalesforceSDKCommon.xcodeproj"; sourceTree = "<group>"; };
 		B58C43C2226F635A0090B64F /* SalesforceSDKCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SalesforceSDKCore.xcodeproj; path = "mobile_sdk/SalesforceMobileSDK-iOS/libs/SalesforceSDKCore/SalesforceSDKCore.xcodeproj"; sourceTree = "<group>"; };
-		B58C43EE226F650E0090B64F /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		B58C43EF226F650E0090B64F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B58C43F0226F650E0090B64F /* bootconfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bootconfig.plist; sourceTree = "<group>"; };
 		B58C43F1226F650E0090B64F /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		B58C43F2226F650E0090B64F /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B58C440A226F83800090B64F /* SFSDKStarter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SFSDKStarter.entitlements; sourceTree = "<group>"; };
 		B59C3F1F23579F9D0060CE1A /* ContactsSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsSceneController.swift; sourceTree = "<group>"; };
 		B59C3F272357A02D0060CE1A /* ContactDetailsSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsSceneController.swift; sourceTree = "<group>"; };
@@ -174,6 +172,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5731919623BEABBF000BE2E7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B58C438E226F61D70090B64F /* Info.plist */,
+				B58C43F0226F650E0090B64F /* bootconfig.plist */,
+				B58C4389226F61D70090B64F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5731919723BEABEB000BE2E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5731919423BEA712000BE2E7 /* RestClient+attachments.swift */,
+				B59C3F3F235945F90060CE1A /* TableView+Instrumentation.swift */,
+				B59C3F40235945F90060CE1A /* UIImage+resize.swift */,
+				B59C3F2F235945F90060CE1A /* RestClient+extensions.swift */,
+				B59C3F3E235945F90060CE1A /* AppDelegate+Trailhead.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5731919823BEAC38000BE2E7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B58C4386226F61D70090B64F /* Main.storyboard */,
+				B58C438B226F61D70090B64F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5731919923BEAC74000BE2E7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5731919B23BEACD2000BE2E7 /* InitialViewController.swift */,
+				571411DB23BC19840089C003 /* AccountSceneController.swift */,
+				B59C3F272357A02D0060CE1A /* ContactDetailsSceneController.swift */,
+				B59C3F1F23579F9D0060CE1A /* ContactsSceneController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		5731919A23BEAC89000BE2E7 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				B58C43EF226F650E0090B64F /* AppDelegate.swift */,
+				5731918423BE945C000BE2E7 /* Service.swift */,
+				B58C43F1226F650E0090B64F /* main.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
 		B58C4374226F61D70090B64F = {
 			isa = PBXGroup;
 			children = (
@@ -199,25 +249,12 @@
 		B58C437F226F61D70090B64F /* SFSDKStarter */ = {
 			isa = PBXGroup;
 			children = (
+				5731919A23BEAC89000BE2E7 /* Supporting */,
+				5731919923BEAC74000BE2E7 /* Scenes */,
+				5731919823BEAC38000BE2E7 /* Storyboards */,
+				5731919723BEABEB000BE2E7 /* Extensions */,
+				5731919623BEABBF000BE2E7 /* Resources */,
 				B58C440A226F83800090B64F /* SFSDKStarter.entitlements */,
-				B58C43EF226F650E0090B64F /* AppDelegate.swift */,
-				B59C3F1F23579F9D0060CE1A /* ContactsSceneController.swift */,
-				B59C3F3E235945F90060CE1A /* AppDelegate+Trailhead.swift */,
-				B59C3F2F235945F90060CE1A /* RestClient+extensions.swift */,
-				B59C3F3F235945F90060CE1A /* TableView+Instrumentation.swift */,
-				B59C3F40235945F90060CE1A /* UIImage+resize.swift */,
-				B59C3F272357A02D0060CE1A /* ContactDetailsSceneController.swift */,
-				B58C43F0226F650E0090B64F /* bootconfig.plist */,
-				B58C43EE226F650E0090B64F /* InitialViewController.swift */,
-				B58C43F1226F650E0090B64F /* main.swift */,
-				B58C43F2226F650E0090B64F /* RootViewController.swift */,
-				B58C4386226F61D70090B64F /* Main.storyboard */,
-				B58C4389226F61D70090B64F /* Assets.xcassets */,
-				B58C438B226F61D70090B64F /* LaunchScreen.storyboard */,
-				B58C438E226F61D70090B64F /* Info.plist */,
-				571411DB23BC19840089C003 /* AccountSceneController.swift */,
-				5731918423BE945C000BE2E7 /* Service.swift */,
-				5731919423BEA712000BE2E7 /* RestClient+attachments.swift */,
 			);
 			path = SFSDKStarter;
 			sourceTree = "<group>";
@@ -482,9 +519,8 @@
 			files = (
 				B58C43F4226F650E0090B64F /* AppDelegate.swift in Sources */,
 				B59C3F43235945F90060CE1A /* TableView+Instrumentation.swift in Sources */,
-				B58C43F3226F650E0090B64F /* InitialViewController.swift in Sources */,
-				B58C43F7226F650E0090B64F /* RootViewController.swift in Sources */,
 				B58C43F6226F650E0090B64F /* main.swift in Sources */,
+				5731919C23BEACD2000BE2E7 /* InitialViewController.swift in Sources */,
 				5731918523BE945C000BE2E7 /* Service.swift in Sources */,
 				B59C3F282357A02D0060CE1A /* ContactDetailsSceneController.swift in Sources */,
 				B59C3F42235945F90060CE1A /* AppDelegate+Trailhead.swift in Sources */,
@@ -658,7 +694,7 @@
 				CODE_SIGN_ENTITLEMENTS = SFSDKStarter/SFSDKStarter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 745ST2PM9F;
-				INFOPLIST_FILE = SFSDKStarter/Info.plist;
+				INFOPLIST_FILE = SFSDKStarter/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -679,7 +715,7 @@
 				CODE_SIGN_ENTITLEMENTS = SFSDKStarter/SFSDKStarter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 745ST2PM9F;
-				INFOPLIST_FILE = SFSDKStarter/Info.plist;
+				INFOPLIST_FILE = SFSDKStarter/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -103,7 +103,8 @@ extension ContactDetailsSceneController {
         let obj = dataRows[indexPath.row]
         cell.textLabel?.text = obj.value
         cell.detailTextLabel?.text = obj.label
-        
+        cell.textLabel?.textColor = .white
+        cell.detailTextLabel?.textColor = .white
         return cell
     }
 }

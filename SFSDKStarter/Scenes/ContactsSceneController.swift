@@ -80,6 +80,7 @@ extension ContactsSceneController {
         let contact = contactRows[indexPath.row]
         cell.textLabel?.text = contact["Name"] as? String
         cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+        cell.textLabel?.textColor = .white
         
         return cell
     }
