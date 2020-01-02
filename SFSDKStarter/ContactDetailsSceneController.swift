@@ -111,6 +111,7 @@ extension ContactDetailsSceneController {
 extension ContactDetailsSceneController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let successMessage = "Completed upload of photo"
         imagePickerCtrl.dismiss(animated: true, completion: nil)
         // make sure to leave this line in, it helps us score the challenge
         RestClient.shared.sendImagesSelectedInstrumentation()
@@ -130,11 +131,11 @@ extension ContactDetailsSceneController: UIImagePickerControllerDelegate, UINavi
                 SalesforceLogger.e(type(of: self), message: "Failed to successfully complete the REST request. \(errorDescription)")
                 Service.showAlert(on: self, style: .alert, title: Service.errorTitle, message: errorDescription)
             }){ result, _ in
-                let successMessage = "Completed upload of photo"
                 SalesforceLogger.d(type(of: self), message: successMessage)
-                Service.showAlert(on: self, style: .alert, title: "Success!", message: successMessage)
             }
         }
+        
+        Service.showAlert(on: self, style: .alert, title: "Success", message: successMessage)
     }
     
 }
