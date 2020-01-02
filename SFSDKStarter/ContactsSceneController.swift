@@ -22,11 +22,22 @@ class ContactsSceneController: UITableViewController {
     // MARK: - View lifecycle
     override func loadView() {
         super.loadView()
+        updateViews()
+        fetchContactsFromAPI()
+    }
+    
+    //MARK: - Helper Methods
+    
+    private func updateViews() {
         if let name = name {
             self.title = name + "'s Contacts"
         } else {
             self.title = "Contacts"
         }
+        
+    }
+    
+    private func fetchContactsFromAPI() {
         
         guard let accountId = accountId else {
             Service.showAlert(on: self, style: .alert, title: "Error getting account information", message: "Please check your connection and try again.")

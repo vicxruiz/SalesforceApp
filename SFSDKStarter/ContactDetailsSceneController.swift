@@ -9,12 +9,13 @@
 import Foundation
 import UIKit
 
-class ContactDetailsSceneController: UIViewController {
+class ContactDetailsSceneController: UITableViewController {
     
     //MARK: - Properties
     
     var name: String?
     var contactId: String?
+    
     
     
 }
