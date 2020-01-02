@@ -71,7 +71,7 @@
             </objects>
             <point key="canvasLocation" x="698" y="-158"/>
         </scene>
-        <!--Contact Details Scene Controller-->
+        <!--Title-->
         <scene sceneID="Slp-Jg-o8I">
             <objects>
                 <tableViewController id="OFD-be-30P" customClass="ContactDetailsSceneController" customModule="SFSDKStarter" customModuleProvider="target" sceneMemberID="viewController">
@@ -94,7 +94,9 @@
                             <outlet property="delegate" destination="OFD-be-30P" id="hHZ-ER-HoN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="XJa-S2-get"/>
+                    <navigationItem key="navigationItem" title="Title" id="K5F-aG-O3K">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="camera.fill" catalog="system" id="9Ms-zF-yBy"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rp6-Jo-yoT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,4 +119,7 @@
             <point key="canvasLocation" x="-928" y="-155"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera.fill" catalog="system" width="64" height="48"/>
+    </resources>
 </document>
