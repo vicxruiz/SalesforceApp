@@ -95,7 +95,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="K5F-aG-O3K">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="camera.fill" catalog="system" id="9Ms-zF-yBy"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="camera.fill" catalog="system" id="9Ms-zF-yBy">
+                            <connections>
+                                <action selector="didTapPhotoButton:" destination="OFD-be-30P" id="5qN-7a-7BA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rp6-Jo-yoT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
