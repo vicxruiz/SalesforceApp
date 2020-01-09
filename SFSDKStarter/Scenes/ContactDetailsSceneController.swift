@@ -47,7 +47,9 @@ class ContactDetailsSceneController: UITableViewController {
         
         RestClient.shared.send(request: request, onFailure: { (error, urlResponse) in
             SalesforceLogger.d(type(of:self), message:"Error invoking: \(request)")
-            Service.showAlert(on: self, style: .alert, title: Service.errorTitle, message: error?.localizedDescription)
+            DispatchQueue.main.async {
+               Service.showAlert(on: self, style: .alert, title: Service.errorTitle, message: error?.localizedDescription)
+            }
         }) { [weak self] (response, urlResponse) in
             var results = [ObjectField]()
             guard let strongSelf = self else { return }

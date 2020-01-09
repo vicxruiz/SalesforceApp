@@ -2,8 +2,8 @@
 //  AccountSceneController.swift
 //  SFSDKStarter
 //
-//  Created by Victor  on 12/31/19.
-//  Copyright © 2019 Salesforce. All rights reserved.
+//  Created by Victor  on 1/9/20.
+//  Copyright © 2020 Salesforce. All rights reserved.
 //
 
 import Foundation
@@ -23,7 +23,9 @@ class AccountSceneController: UITableViewController {
         let request = RestClient.shared.request(forQuery: "SELECT Id, Name FROM Account LIMIT 10")
         RestClient.shared.send(request: request, onFailure: { (error, urlResponse) in
             SalesforceLogger.d(type(of:self), message:"Error invoking: \(request)")
-            Service.showAlert(on: self, style: .alert, title: Service.errorTitle, message: error?.localizedDescription)
+            DispatchQueue.main.async {
+                Service.showAlert(on: self, style: .alert, title: Service.errorTitle, message: error?.localizedDescription)
+            }
         }) { [weak self] (response, urlResponse) in
             guard let strongSelf = self,
                 let jsonResponse = response as? Dictionary<String,Any>,
@@ -78,3 +80,4 @@ extension AccountSceneController {
     }
     
 }
+

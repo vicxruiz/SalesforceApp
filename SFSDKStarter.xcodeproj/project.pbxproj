@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		571411DC23BC19840089C003 /* AccountSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571411DB23BC19840089C003 /* AccountSceneController.swift */; };
+		571F867623C7A98C00EE475B /* AccountSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571F867523C7A98C00EE475B /* AccountSceneController.swift */; };
 		5731918523BE945C000BE2E7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5731918423BE945C000BE2E7 /* Service.swift */; };
 		5731919523BEA712000BE2E7 /* RestClient+attachments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5731919423BEA712000BE2E7 /* RestClient+attachments.swift */; };
 		5731919C23BEACD2000BE2E7 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5731919B23BEACD2000BE2E7 /* InitialViewController.swift */; };
@@ -124,7 +124,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		571411DB23BC19840089C003 /* AccountSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSceneController.swift; sourceTree = "<group>"; };
+		571F867523C7A98C00EE475B /* AccountSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSceneController.swift; sourceTree = "<group>"; };
 		5731918423BE945C000BE2E7 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		5731919423BEA712000BE2E7 /* RestClient+attachments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestClient+attachments.swift"; sourceTree = "<group>"; };
 		5731919B23BEACD2000BE2E7 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -206,8 +206,8 @@
 		5731919923BEAC74000BE2E7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				571F867523C7A98C00EE475B /* AccountSceneController.swift */,
 				5731919B23BEACD2000BE2E7 /* InitialViewController.swift */,
-				571411DB23BC19840089C003 /* AccountSceneController.swift */,
 				B59C3F272357A02D0060CE1A /* ContactDetailsSceneController.swift */,
 				B59C3F1F23579F9D0060CE1A /* ContactsSceneController.swift */,
 			);
@@ -526,8 +526,8 @@
 				B59C3F42235945F90060CE1A /* AppDelegate+Trailhead.swift in Sources */,
 				B59C3F44235945F90060CE1A /* UIImage+resize.swift in Sources */,
 				5731919523BEA712000BE2E7 /* RestClient+attachments.swift in Sources */,
-				571411DC23BC19840089C003 /* AccountSceneController.swift in Sources */,
 				B59C3F41235945F90060CE1A /* RestClient+extensions.swift in Sources */,
+				571F867623C7A98C00EE475B /* AccountSceneController.swift in Sources */,
 				B59C3F2023579F9D0060CE1A /* ContactsSceneController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
